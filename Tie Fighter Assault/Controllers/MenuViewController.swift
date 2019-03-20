@@ -9,10 +9,20 @@
 import UIKit
 
 class MenuViewController: UIViewController {
-
+  
+    // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        // High Score
+        //let hiScore = UserDefaults.standard.integer(forKey: Constants.hiScore)
+        
+        
     }
-
+    
+    // MARK: - Events
+    @IBAction func gameStartClicked(_ sender: Any) {
+        self.present(GameViewController(), animated: false)
+    }
+    
 }

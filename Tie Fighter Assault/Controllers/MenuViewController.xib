@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
-    <device id="retina3_5" orientation="landscape">
+    <device id="retina4_0" orientation="landscape">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
@@ -12,32 +12,59 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="MenuViewController" customModule="Tie_Fighter_Assault" customModuleProvider="target">
             <connections>
+                <outlet property="hiScoreLabel" destination="7Iu-dU-enW" id="7Iz-DE-pzm"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+            <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Star Field" translatesAutoresizingMaskIntoConstraints="NO" id="rbY-7t-ixQ">
-                    <rect key="frame" x="0.0" y="0.0" width="480" height="320"/>
+                    <rect key="frame" x="0.0" y="0.0" width="568" height="320"/>
                 </imageView>
                 <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Logo" translatesAutoresizingMaskIntoConstraints="NO" id="qQA-b8-HNX">
-                    <rect key="frame" x="147" y="40" width="186" height="160"/>
+                    <rect key="frame" x="205" y="40" width="158" height="136"/>
                     <constraints>
                         <constraint firstAttribute="width" secondItem="qQA-b8-HNX" secondAttribute="height" multiplier="65:56" id="ZzL-bm-nMM"/>
                     </constraints>
                 </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Go2-Zn-5Mg" userLabel="Hi Score">
+                    <rect key="frame" x="204" y="196" width="160" height="24"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HIGH SCORE" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dAg-AR-wlr">
+                            <rect key="frame" x="0.0" y="4" width="81.5" height="16"/>
+                            <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="00000000" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Iu-dU-enW">
+                            <rect key="frame" x="100" y="4" width="60" height="16"/>
+                            <fontDescription key="fontDescription" name="Futura-Medium" family="Futura" pointSize="12"/>
+                            <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="24" id="05e-wS-nUl"/>
+                        <constraint firstItem="dAg-AR-wlr" firstAttribute="centerY" secondItem="Go2-Zn-5Mg" secondAttribute="centerY" id="0z6-ZX-vQU"/>
+                        <constraint firstItem="7Iu-dU-enW" firstAttribute="centerY" secondItem="Go2-Zn-5Mg" secondAttribute="centerY" id="LRI-Gb-a06"/>
+                        <constraint firstAttribute="trailing" secondItem="7Iu-dU-enW" secondAttribute="trailing" id="Zy3-3f-tQc"/>
+                        <constraint firstAttribute="width" constant="160" id="bMb-2M-6qw"/>
+                        <constraint firstItem="dAg-AR-wlr" firstAttribute="leading" secondItem="Go2-Zn-5Mg" secondAttribute="leading" id="riz-XK-82S"/>
+                    </constraints>
+                </view>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zL4-Yl-kwm">
-                    <rect key="frame" x="190" y="240" width="100" height="40"/>
+                    <rect key="frame" x="220" y="240" width="128" height="40"/>
                     <color key="backgroundColor" red="0.58072251080000004" green="0.066734083" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="40" id="j18-cj-bHL"/>
-                        <constraint firstAttribute="width" constant="100" id="xGf-Lu-xaX"/>
+                        <constraint firstAttribute="width" constant="128" id="xGf-Lu-xaX"/>
                     </constraints>
-                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                    <state key="normal" title="Start game">
+                    <fontDescription key="fontDescription" name="Futura-Bold" family="Futura" pointSize="14"/>
+                    <state key="normal" title="START GAME">
                         <color key="titleColor" red="0.91372549020000005" green="0.96862745100000003" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <userDefinedRuntimeAttributes>
@@ -55,10 +82,12 @@
                 <constraint firstItem="zL4-Yl-kwm" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="49w-8M-3js"/>
                 <constraint firstItem="rbY-7t-ixQ" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="6GH-9X-yz3"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="zL4-Yl-kwm" secondAttribute="bottom" constant="40" id="DBw-86-lRY"/>
+                <constraint firstItem="Go2-Zn-5Mg" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Nvw-Nj-Rrg"/>
+                <constraint firstItem="zL4-Yl-kwm" firstAttribute="top" secondItem="Go2-Zn-5Mg" secondAttribute="bottom" constant="20" id="Q9a-IW-AGt"/>
                 <constraint firstAttribute="bottom" secondItem="rbY-7t-ixQ" secondAttribute="bottom" id="Z7I-mj-W8z"/>
-                <constraint firstItem="zL4-Yl-kwm" firstAttribute="top" secondItem="qQA-b8-HNX" secondAttribute="bottom" constant="40" id="ZKy-0S-Vwf"/>
                 <constraint firstItem="qQA-b8-HNX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Zzy-wg-SwU"/>
                 <constraint firstItem="qQA-b8-HNX" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="40" id="hcC-rI-8NH"/>
+                <constraint firstItem="Go2-Zn-5Mg" firstAttribute="top" secondItem="qQA-b8-HNX" secondAttribute="bottom" constant="20" id="mgY-JY-L4l"/>
                 <constraint firstAttribute="trailing" secondItem="rbY-7t-ixQ" secondAttribute="trailing" id="o2d-MR-DsK"/>
                 <constraint firstItem="rbY-7t-ixQ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="tv4-WX-w0g"/>
             </constraints>

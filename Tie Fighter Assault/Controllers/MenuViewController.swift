@@ -10,14 +10,16 @@ import UIKit
 
 class MenuViewController: UIViewController {
   
+    // MARK: - Outlets
+    @IBOutlet weak var hiScoreLabel: UILabel!
+    
     // MARK: - Life Cycle
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // High Score
-        //let hiScore = UserDefaults.standard.integer(forKey: Constants.hiScore)
-        
-        
+        // Print high score
+        let hiScore = UserDefaults.standard.integer(forKey: Constants.hiScore)
+        hiScoreLabel.text = String(format: "%08d", hiScore)
     }
     
     // MARK: - Events

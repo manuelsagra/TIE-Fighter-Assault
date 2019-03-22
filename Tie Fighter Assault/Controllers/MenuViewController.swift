@@ -14,12 +14,8 @@ class MenuViewController: UIViewController {
     @IBOutlet weak var hiScoreLabel: UILabel!
     
     // MARK: - Life Cycle
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-        // Print high score
-        let hiScore = UserDefaults.standard.integer(forKey: Constants.hiScore)
-        hiScoreLabel.text = String(format: "%08d", hiScore)
+    override func viewDidAppear(_ animated: Bool) {
+        showHighScore()
     }
     
     // MARK: - Events
@@ -27,4 +23,8 @@ class MenuViewController: UIViewController {
         self.present(GameViewController(), animated: false)
     }
     
+    private func showHighScore() {
+        let hiScore = UserDefaults.standard.integer(forKey: Constants.hiScore)
+        hiScoreLabel.text = String(format: "%08d", hiScore)
+    }
 }

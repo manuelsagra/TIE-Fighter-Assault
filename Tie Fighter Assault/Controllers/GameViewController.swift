@@ -27,8 +27,10 @@ class GameViewController: UIViewController {
     // MARK: - Properties
     private var score: Int = 0
     private var shield: Int = 100
-    private var protonTorpedoes: Int = 0
+    private var protonTorpedoes: Int = 10
     private var currentWeapon: Weapon = .Laser
+    private let arConfiguration = ARWorldTrackingConfiguration()
+    private var asteroidTimer = Timer()
     
     // MARK: - Life Cycle
     override func viewDidLoad() {
@@ -53,24 +55,26 @@ class GameViewController: UIViewController {
         protonTorpedoesView.addGestureRecognizer(protonTorpedoesTap)
         
         // Init world
+        asteroidTimer = Timer.scheduledTimer(timeInterval: Constants.asteroidSpawnTime, target: self, selector: #selector(addAsteroid), userInfo: nil, repeats: true)
         addTieFighter()
-        addAsteroids()
     }
     
     override func viewDidAppear(_ animated: Bool) {
         super.viewDidAppear(animated)
         
-        let configuration = ARWorldTrackingConfiguration()
-        sceneView.session.run(configuration)
+        sceneView.session.run(arConfiguration)
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewWillDisappear(animated)
         
-        sceneView.session.pause()
+        pause()
     }
+}
+
+// MARK: - Objects management
+extension GameViewController {
     
-    // MARK: - Objects
     func addTieFighter() {
         let tie = TieFighterVader()
         tie.position.x = Float.random(in: -1 ... 1)
@@ -80,28 +84,44 @@ class GameViewController: UIViewController {
         sceneView.scene.rootNode.addChildNode(tie)
     }
     
-    func addAsteroids() {
-        for _ in 1...10 {
-            let asteroid = Asteroid()
-            asteroid.position.x = Float.random(in: -10 ... 10)
-            asteroid.position.y = Float.random(in: -1 ... 1)
-            asteroid.position.z = Float.random(in: -5 ... -3)
-            
-            sceneView.scene.rootNode.addChildNode(asteroid)
-        }
+    @objc func addAsteroid() {
+        let asteroid = Asteroid(game: self)
+        asteroid.position.x = Float.random(in: -10 ... 10)
+        asteroid.position.y = Float.random(in: -1 ... 1)
+        asteroid.position.z = Float.random(in: -20 ... -10)
+        
+        sceneView.scene.rootNode.addChildNode(asteroid)
     }
     
-    // MARK: - Events
+    func removeNode(_ node: SCNNode) {
+        let nodes = sceneView.scene.rootNode.childNodes
+        print("\(nodes.count) nodes")
+        nodes.forEach { childNode in
+            if childNode == node {
+                print("Node found!")
+                childNode.removeFromParentNode()
+            }
+        }
+    }
+}
+
+// MARK: - Tap Events
+extension GameViewController {
+
     @IBAction func ejectClicked(_ sender: Any) {
+        pause()
+        
         let alertController = UIAlertController(title: Constants.ejectTitle, message: Constants.ejectMessage, preferredStyle: .alert)
-        let settingsAction = UIAlertAction(title: "Eject", style: .default) { (_) -> Void in
-            self.dismiss(animated: false)
+        let ejectAction = UIAlertAction(title: "Eject", style: .default) { (_) -> Void in
+            self.gameOver()
         }
         let cancelAction = UIAlertAction(title: "Cancel", style: .default, handler: nil)
         alertController.addAction(cancelAction)
-        alertController.addAction(settingsAction)
+        alertController.addAction(ejectAction)
         
-        self.present(alertController, animated: true, completion: nil)
+        self.present(alertController, animated: true, completion: {
+            self.resume()
+        })
     }
     
     @objc private func tapScreen() {
@@ -125,8 +145,58 @@ class GameViewController: UIViewController {
             updateWeaponUI()
         }
     }
+}
+
+// MARK: - Game events / status
+extension GameViewController {
+    private func pause() {
+        sceneView.session.pause()
+        asteroidTimer.invalidate()
+    }
     
-    // MARK: - Game UI
+    private func resume() {
+        sceneView.session.run(arConfiguration)
+        asteroidTimer.fire()
+    }
+    
+    func asteroidHit(asteroid: SCNNode) {
+        // TODO Sound
+        // TODO Check Bonus (Shield, protons)
+        updateShield(increment: Constants.asteroidHitDamage)
+        removeNode(asteroid)
+    }
+    
+    private func gameOver() {
+        pause()
+        
+        var message = Constants.gameOverMessage
+        if checkHighScore() {
+            message = "\(message)\n\nNew high score, congratulations!"
+        }
+        let alertController = UIAlertController(title: Constants.gameOverTitle, message: message, preferredStyle: .alert)
+        alertController.addAction(UIAlertAction(title: "Accept", style: .default, handler: { (_) -> Void in
+            self.pause()
+            self.dismiss(animated: true)
+        }))
+        
+        self.present(alertController, animated: true)
+    }
+    
+    private func checkHighScore() -> Bool {
+        let prevHiScore = UserDefaults.standard.integer(forKey: Constants.hiScore)
+        
+        if prevHiScore < score {
+            UserDefaults.standard.set(score, forKey: Constants.hiScore)
+            UserDefaults.standard.synchronize()
+            return true
+        }
+        return false
+    }
+}
+
+// MARK: - Game UI
+extension GameViewController {
+    
     private func updateWeaponUI() {
         switch currentWeapon {
         case .Laser:
@@ -147,12 +217,27 @@ class GameViewController: UIViewController {
             currentWeapon = .Laser
             updateWeaponUI()
         }
-        protonTorpedoesLabel.text = String(format: "%02d", protonTorpedoes)
+        DispatchQueue.main.async {
+            self.protonTorpedoesLabel.text = String(format: "%02d", self.protonTorpedoes)
+        }
     }
     
     private func updateScore(increment: Int) {
         score += increment
-        scoreLabel.text = String(format: "%08d", score)
+        DispatchQueue.main.async {
+            self.scoreLabel.text = String(format: "%08d", self.score)
+        }
+    }
+    
+    private func updateShield(increment: Int) {
+        shield += increment
+        if shield <= 0 {
+            gameOver()
+            shield = 0
+        }
+        DispatchQueue.main.async {
+            self.shieldLabel.text = "\(String(format: "%02d", self.shield))%"
+        }
     }
 }
 

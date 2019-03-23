@@ -21,11 +21,16 @@ enum Constants {
     static let gameOverMessage = "See you again rebel pilot!"
     
     // Damage
-    static let asteroidHitDamage = -20
-    static let tieFighterHitDamage = -50
+    static let asteroidHitDamage = 20
+    static let tieFighterHitDamage = 50
     
+    static let laserHitDamage = 1
+    static let protonTorpedoDamage = 2
+    
+    // Score
+    static let asteroidScore = 100
+    static let tieFighterScore = 250
+        
     // Timer
-    static let asteroidSpawnTime: Double = 10.0 // Seconds
+    static let asteroidSpawnTime: Double = 5.0 // Seconds
 }
-
-typealias AnimationCompletion = (() -> Void)

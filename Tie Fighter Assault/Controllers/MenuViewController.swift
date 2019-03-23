@@ -12,15 +12,31 @@ class MenuViewController: UIViewController {
   
     // MARK: - Outlets
     @IBOutlet weak var hiScoreLabel: UILabel!
+    private var musicPlayer: MusicPlayer?
     
     // MARK: - Life Cycle
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        musicPlayer = MusicPlayer(with: "Title")
+    }
+    
     override func viewDidAppear(_ animated: Bool) {
         showHighScore()
+        
+        musicPlayer?.play()
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        
+        musicPlayer?.stop()
     }
     
     // MARK: - Events
     @IBAction func gameStartClicked(_ sender: Any) {
         self.present(GameViewController(), animated: false)
+        SoundEffect.sharedInstance.play(sound: .gameStart)
     }
     
     private func showHighScore() {

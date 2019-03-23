@@ -8,7 +8,7 @@
 
 import SceneKit
 
-class TieFighterVader: Object3D {
+class TieFighterVader: SCNNode {
     override init() {
         super.init()
         

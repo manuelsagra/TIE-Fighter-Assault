@@ -8,10 +8,11 @@
 
 import SceneKit
 
-class Asteroid: Object3D {
+class Asteroid: SCNNode {
     
     // MARK: - Properties
     private weak var game: GameViewController?
+    var resistance = Int.random(in: 6 ... 10)
     
     // MARK: - Initialization
     init(game: GameViewController?) {

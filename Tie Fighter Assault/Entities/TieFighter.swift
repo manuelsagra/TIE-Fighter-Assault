@@ -8,7 +8,9 @@
 
 import SceneKit
 
-class TieFighter: Object3D {
+class TieFighter: SCNNode {
+    
+    // MARK: - Initialization
     override init() {
         super.init()
         
@@ -18,4 +20,5 @@ class TieFighter: Object3D {
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
 }

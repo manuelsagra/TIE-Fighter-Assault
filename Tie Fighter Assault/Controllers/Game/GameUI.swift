@@ -47,9 +47,12 @@ extension GameViewController {
         if shield <= 0 {
             gameOver()
             shield = 0
+        } else if shield > 100 {
+            shield = 100
         }
         DispatchQueue.main.async {
             self.shieldLabel.text = "\(String(format: "%02d", self.shield))%"
         }
     }
+    
 }

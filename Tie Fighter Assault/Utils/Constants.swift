@@ -30,6 +30,10 @@ enum Constants {
     // Score
     static let asteroidScore = 100
     static let tieFighterScore = 250
+    
+    // Bonus
+    static let shieldBonusIncrement = 10
+    static let protonTorpedoesBonusIncrement = 5
         
     // Timer
     static let asteroidSpawnTime: Double = 5.0 // Seconds

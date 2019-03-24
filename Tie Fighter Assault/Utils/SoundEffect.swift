@@ -11,10 +11,13 @@ import AVFoundation
 enum Effect: String {
     case laser = "Laser"
     case protonTorpedo = "ProtonTorpedo"
+    
     case hit = "Hit"
+    case playerHit = "PlayerHit"
     
     case asteroidExplossion = "AsteroidExplossion"
     case tieFighterExplossion = "TieFighterExplossion"
+    case tieFighterFlyby = "TieFighterFlyby"
     
     case bonusShield = "BonusShield"
     case bonusProtonTorpedoes = "BonusProtonTorpedoes"

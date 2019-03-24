@@ -10,15 +10,36 @@ import SceneKit
 
 class TieFighter: SCNNode {
     
+    // MARK: - Properties
+    private weak var game: GameViewController?
+    var resistance = 0
+    let initialResistance = Int.random(in: 10 ... 20)
+    
     // MARK: - Initialization
-    override init() {
+    init(game: GameViewController) {
+        self.game = game
+        
         super.init()
         
-        loadModel(model: "TieFighter.dae")
+        resistance = initialResistance
+        
+        physicsBody?.categoryBitMask = Collisions.tie.rawValue
+        physicsBody?.contactTestBitMask = Collisions.shoot.rawValue
+        
+        loadModel(model: "TieFighter.scn")
+        
+        moveToPlayer()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    // MARK: - Movement
+    private func moveToPlayer() {
+        let move = SCNAction.move(to: SCNVector3(0, 0, 0), duration: TimeInterval(Float.random(in: 15.0 ... 20.0)))
+        self.runAction(move) {
+            self.game?.objectHit(object: self, damage: Constants.tieFighterHitDamage)
+        }
+    }
 }

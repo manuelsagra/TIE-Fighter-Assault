@@ -16,10 +16,7 @@
 		32C70C522242B4DF0049AD6F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C70C502242B4DF0049AD6F /* GameViewController.swift */; };
 		32C70C532242B4DF0049AD6F /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32C70C512242B4DF0049AD6F /* GameViewController.xib */; };
 		32C70C552242D4340049AD6F /* TieFighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C70C542242D4340049AD6F /* TieFighter.swift */; };
-		32C70C5B2242D8FB0049AD6F /* TieFighter.dae in Resources */ = {isa = PBXBuildFile; fileRef = 32C70C5A2242D8FB0049AD6F /* TieFighter.dae */; };
 		32C70C5D2242DD6D0049AD6F /* SCNNode+Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C70C5C2242DD6D0049AD6F /* SCNNode+Utils.swift */; };
-		32C70C632242E3410049AD6F /* TieFighterVader.dae in Resources */ = {isa = PBXBuildFile; fileRef = 32C70C622242E3410049AD6F /* TieFighterVader.dae */; };
-		32C70C652242E3970049AD6F /* TieFighterVader.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C70C642242E3970049AD6F /* TieFighterVader.swift */; };
 		32C70C672242E7BE0049AD6F /* Asteroid.dae in Resources */ = {isa = PBXBuildFile; fileRef = 32C70C662242E7BE0049AD6F /* Asteroid.dae */; };
 		32C70C6B2242E8840049AD6F /* asteroid.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 32C70C6A2242E8840049AD6F /* asteroid.jpg */; };
 		32C70C6D2242E8C50049AD6F /* Asteroid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C70C6C2242E8C50049AD6F /* Asteroid.swift */; };
@@ -39,10 +36,16 @@
 		32EABAB92246E1A200B572E9 /* Laser.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32EABAB62246E1A200B572E9 /* Laser.mp3 */; };
 		32EABABB2246E21B00B572E9 /* GameOver.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32EABABA2246E21B00B572E9 /* GameOver.mp3 */; };
 		32EABABD2246E29B00B572E9 /* TieFighterExplossion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32EABABC2246E29B00B572E9 /* TieFighterExplossion.mp3 */; };
-		32EABABF2246E2EB00B572E9 /* AsteroidExplossion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32EABABE2246E2EB00B572E9 /* AsteroidExplossion.mp3 */; };
 		32EABAC12246E34700B572E9 /* GameStart.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32EABAC02246E34700B572E9 /* GameStart.mp3 */; };
 		32EABAC32246E3D100B572E9 /* ProtonTorpedo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32EABAC22246E3D100B572E9 /* ProtonTorpedo.mp3 */; };
 		32EABAC52246E4E100B572E9 /* Hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32EABAC42246E4E100B572E9 /* Hit.mp3 */; };
+		32EABAC72247846100B572E9 /* AsteroidExplossion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32EABAC62247846100B572E9 /* AsteroidExplossion.mp3 */; };
+		32EABACB2247865D00B572E9 /* PlayerHit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32EABACA2247865D00B572E9 /* PlayerHit.mp3 */; };
+		32EABACD2247A1CD00B572E9 /* TieFighterFlyby.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32EABACC2247A1CD00B572E9 /* TieFighterFlyby.mp3 */; };
+		32EABACF2247AC7900B572E9 /* Explossion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EABACE2247AC7900B572E9 /* Explossion.swift */; };
+		32EABAD12247ACAC00B572E9 /* Explossion.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 32EABAD02247ACAC00B572E9 /* Explossion.scnp */; };
+		32EABAD32247ACDC00B572E9 /* spark.png in Resources */ = {isa = PBXBuildFile; fileRef = 32EABAD22247ACDC00B572E9 /* spark.png */; };
+		32EABADF2247C7C400B572E9 /* TieFighter.scn in Resources */ = {isa = PBXBuildFile; fileRef = 32EABADE2247C7C400B572E9 /* TieFighter.scn */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,10 +60,7 @@
 		32C70C502242B4DF0049AD6F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		32C70C512242B4DF0049AD6F /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 		32C70C542242D4340049AD6F /* TieFighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TieFighter.swift; sourceTree = "<group>"; };
-		32C70C5A2242D8FB0049AD6F /* TieFighter.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = TieFighter.dae; sourceTree = "<group>"; };
 		32C70C5C2242DD6D0049AD6F /* SCNNode+Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SCNNode+Utils.swift"; sourceTree = "<group>"; };
-		32C70C622242E3410049AD6F /* TieFighterVader.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = TieFighterVader.dae; sourceTree = "<group>"; };
-		32C70C642242E3970049AD6F /* TieFighterVader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TieFighterVader.swift; sourceTree = "<group>"; };
 		32C70C662242E7BE0049AD6F /* Asteroid.dae */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml.dae; path = Asteroid.dae; sourceTree = "<group>"; };
 		32C70C6A2242E8840049AD6F /* asteroid.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = asteroid.jpg; sourceTree = "<group>"; };
 		32C70C6C2242E8C50049AD6F /* Asteroid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Asteroid.swift; sourceTree = "<group>"; };
@@ -80,10 +80,16 @@
 		32EABAB62246E1A200B572E9 /* Laser.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Laser.mp3; sourceTree = "<group>"; };
 		32EABABA2246E21B00B572E9 /* GameOver.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GameOver.mp3; sourceTree = "<group>"; };
 		32EABABC2246E29B00B572E9 /* TieFighterExplossion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TieFighterExplossion.mp3; sourceTree = "<group>"; };
-		32EABABE2246E2EB00B572E9 /* AsteroidExplossion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = AsteroidExplossion.mp3; sourceTree = "<group>"; };
 		32EABAC02246E34700B572E9 /* GameStart.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GameStart.mp3; sourceTree = "<group>"; };
 		32EABAC22246E3D100B572E9 /* ProtonTorpedo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ProtonTorpedo.mp3; sourceTree = "<group>"; };
 		32EABAC42246E4E100B572E9 /* Hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Hit.mp3; sourceTree = "<group>"; };
+		32EABAC62247846100B572E9 /* AsteroidExplossion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = AsteroidExplossion.mp3; sourceTree = "<group>"; };
+		32EABACA2247865D00B572E9 /* PlayerHit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = PlayerHit.mp3; sourceTree = "<group>"; };
+		32EABACC2247A1CD00B572E9 /* TieFighterFlyby.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TieFighterFlyby.mp3; sourceTree = "<group>"; };
+		32EABACE2247AC7900B572E9 /* Explossion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explossion.swift; sourceTree = "<group>"; };
+		32EABAD02247ACAC00B572E9 /* Explossion.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = Explossion.scnp; sourceTree = "<group>"; };
+		32EABAD22247ACDC00B572E9 /* spark.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = spark.png; sourceTree = "<group>"; };
+		32EABADE2247C7C400B572E9 /* TieFighter.scn */ = {isa = PBXFileReference; lastKnownFileType = file.bplist; path = TieFighter.scn; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,7 +147,7 @@
 		32213F782242AC5400B79AF7 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				32213F832242ADF700B79AF7 /* Graphics */,
+				32213F832242ADF700B79AF7 /* Textures */,
 				32213F7A2242AC5F00B79AF7 /* Models */,
 				32213F792242AC5B00B79AF7 /* Music */,
 				32EABA9722469A7400B572E9 /* Sounds */,
@@ -163,10 +169,9 @@
 		32213F7A2242AC5F00B79AF7 /* Models */ = {
 			isa = PBXGroup;
 			children = (
-				32C70C6A2242E8840049AD6F /* asteroid.jpg */,
+				32EABAD02247ACAC00B572E9 /* Explossion.scnp */,
 				32C70C662242E7BE0049AD6F /* Asteroid.dae */,
-				32C70C622242E3410049AD6F /* TieFighterVader.dae */,
-				32C70C5A2242D8FB0049AD6F /* TieFighter.dae */,
+				32EABADE2247C7C400B572E9 /* TieFighter.scn */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -175,9 +180,9 @@
 			isa = PBXGroup;
 			children = (
 				32C70C542242D4340049AD6F /* TieFighter.swift */,
-				32C70C642242E3970049AD6F /* TieFighterVader.swift */,
 				32C70C6C2242E8C50049AD6F /* Asteroid.swift */,
 				32EABA9122463F3200B572E9 /* Shoot.swift */,
+				32EABACE2247AC7900B572E9 /* Explossion.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -195,22 +200,26 @@
 			path = Utils;
 			sourceTree = "<group>";
 		};
-		32213F832242ADF700B79AF7 /* Graphics */ = {
+		32213F832242ADF700B79AF7 /* Textures */ = {
 			isa = PBXGroup;
 			children = (
+				32EABAD22247ACDC00B572E9 /* spark.png */,
+				32C70C6A2242E8840049AD6F /* asteroid.jpg */,
 			);
-			path = Graphics;
+			path = Textures;
 			sourceTree = "<group>";
 		};
 		32EABA9722469A7400B572E9 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
 				32EABAC42246E4E100B572E9 /* Hit.mp3 */,
+				32EABACA2247865D00B572E9 /* PlayerHit.mp3 */,
+				32EABAC62247846100B572E9 /* AsteroidExplossion.mp3 */,
 				32EABAC22246E3D100B572E9 /* ProtonTorpedo.mp3 */,
-				32EABABE2246E2EB00B572E9 /* AsteroidExplossion.mp3 */,
 				32EABABA2246E21B00B572E9 /* GameOver.mp3 */,
 				32EABAC02246E34700B572E9 /* GameStart.mp3 */,
 				32EABABC2246E29B00B572E9 /* TieFighterExplossion.mp3 */,
+				32EABACC2247A1CD00B572E9 /* TieFighterFlyby.mp3 */,
 				32EABAB02246E07100B572E9 /* BonusShield.mp3 */,
 				32EABAB12246E07100B572E9 /* BonusProtonTorpedoes.mp3 */,
 				32EABAB62246E1A200B572E9 /* Laser.mp3 */,
@@ -292,20 +301,23 @@
 				32EABAC32246E3D100B572E9 /* ProtonTorpedo.mp3 in Resources */,
 				32EABABD2246E29B00B572E9 /* TieFighterExplossion.mp3 in Resources */,
 				32C70C532242B4DF0049AD6F /* GameViewController.xib in Resources */,
-				32C70C632242E3410049AD6F /* TieFighterVader.dae in Resources */,
 				32C70C672242E7BE0049AD6F /* Asteroid.dae in Resources */,
-				32EABABF2246E2EB00B572E9 /* AsteroidExplossion.mp3 in Resources */,
 				32213F702242ABAF00B79AF7 /* LaunchScreen.storyboard in Resources */,
 				32EABAB92246E1A200B572E9 /* Laser.mp3 in Resources */,
+				32EABAD12247ACAC00B572E9 /* Explossion.scnp in Resources */,
+				32EABACD2247A1CD00B572E9 /* TieFighterFlyby.mp3 in Resources */,
 				32EABAB22246E07100B572E9 /* BonusShield.mp3 in Resources */,
 				32EABAAC2246BBB700B572E9 /* Game.mp3 in Resources */,
 				32EABAB32246E07100B572E9 /* BonusProtonTorpedoes.mp3 in Resources */,
+				32EABAD32247ACDC00B572E9 /* spark.png in Resources */,
 				32213F7F2242ACD700B79AF7 /* MenuViewController.xib in Resources */,
 				32EABABB2246E21B00B572E9 /* GameOver.mp3 in Resources */,
 				32213F6D2242ABAF00B79AF7 /* Assets.xcassets in Resources */,
-				32C70C5B2242D8FB0049AD6F /* TieFighter.dae in Resources */,
+				32EABACB2247865D00B572E9 /* PlayerHit.mp3 in Resources */,
+				32EABADF2247C7C400B572E9 /* TieFighter.scn in Resources */,
 				32EABAAD2246BBB700B572E9 /* Title.mp3 in Resources */,
 				32EABAC52246E4E100B572E9 /* Hit.mp3 in Resources */,
+				32EABAC72247846100B572E9 /* AsteroidExplossion.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -317,13 +329,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				32EABA9422463FFF00B572E9 /* Collisions.swift in Sources */,
+				32EABACF2247AC7900B572E9 /* Explossion.swift in Sources */,
 				32C70C522242B4DF0049AD6F /* GameViewController.swift in Sources */,
 				32EABAA122469C6300B572E9 /* GamePhysics.swift in Sources */,
 				32EABA9222463F3200B572E9 /* Shoot.swift in Sources */,
 				32213F662242ABAE00B79AF7 /* AppDelegate.swift in Sources */,
 				32EABAA32246B03600B572E9 /* MusicPlayer.swift in Sources */,
 				32213F7E2242ACD700B79AF7 /* MenuViewController.swift in Sources */,
-				32C70C652242E3970049AD6F /* TieFighterVader.swift in Sources */,
 				32C70C6D2242E8C50049AD6F /* Asteroid.swift in Sources */,
 				32EABAAF2246C7AF00B572E9 /* SoundEffect.swift in Sources */,
 				32C70C5D2242DD6D0049AD6F /* SCNNode+Utils.swift in Sources */,

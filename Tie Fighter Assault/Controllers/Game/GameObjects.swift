@@ -12,12 +12,16 @@ import ARKit
 extension GameViewController {
     
     func addTieFighter() {
-        tieFighter = TieFighterVader()
-        tieFighter?.position.x = Float.random(in: -1 ... 1)
+        tieFighter = TieFighter(game: self)
+        tieFighter?.position.x = Float.random(in: -20 ... 20)
         tieFighter?.position.y = Float.random(in: -1 ... 1)
         tieFighter?.position.z = Float.random(in: -50 ... -30)
         
         sceneView.scene.rootNode.addChildNode(tieFighter!)
+        
+        DispatchQueue.main.async {
+            SoundEffect.sharedInstance.play(sound: .tieFighterFlyby)
+        }
     }
     
     @objc func addAsteroid() {
@@ -37,4 +41,5 @@ extension GameViewController {
             }
         }
     }
+    
 }

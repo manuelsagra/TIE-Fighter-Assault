@@ -40,7 +40,7 @@ class GameViewController: UIViewController {
         UIApplication.shared.isIdleTimerDisabled = true
         
         // AR Delegates
-        sceneView.delegate = self
+        sceneView.session.delegate = self
         sceneView.scene.physicsWorld.contactDelegate = self
         
         // Shoot
@@ -60,7 +60,7 @@ class GameViewController: UIViewController {
         
         // Init world
         asteroidTimer = Timer.scheduledTimer(timeInterval: Constants.asteroidSpawnTime, target: self, selector: #selector(addAsteroid), userInfo: nil, repeats: true)
-        //addTieFighter()
+        addTieFighter()
     }
     
     override func viewDidAppear(_ animated: Bool) {

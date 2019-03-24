@@ -99,4 +99,22 @@ extension GameViewController {
         }
         return false
     }
+    
+    func checkAsteroidBonus() {
+        let chance = Float.random(in: 0 ... 1)
+        // Shield
+        if chance > 0.7 && chance < 0.9 {
+            updateShield(increment: Constants.shieldBonusIncrement)
+            DispatchQueue.main.async {
+                SoundEffect.sharedInstance.play(sound: .bonusShield)
+            }
+        // Proton Torpedoes
+        } else if chance >= 0.9 {
+            updateProtonTorpedoes(increment: Constants.protonTorpedoesBonusIncrement)
+            DispatchQueue.main.async {
+                SoundEffect.sharedInstance.play(sound: .bonusProtonTorpedoes)
+            }
+        }
+    }
+    
 }

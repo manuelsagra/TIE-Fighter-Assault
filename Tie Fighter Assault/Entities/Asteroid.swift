@@ -15,12 +15,15 @@ class Asteroid: SCNNode {
     var resistance = Int.random(in: 6 ... 10)
     
     // MARK: - Initialization
-    init(game: GameViewController?) {
+    init(game: GameViewController) {
         self.game = game
         
         super.init()
         
         loadModel(model: "Asteroid.dae")
+        
+        physicsBody?.categoryBitMask = Collisions.asteroid.rawValue
+        physicsBody?.contactTestBitMask = Collisions.shoot.rawValue 
         
         rotate()
         moveToPlayer()
@@ -40,7 +43,7 @@ class Asteroid: SCNNode {
     private func moveToPlayer() {
         let move = SCNAction.move(to: SCNVector3(0, 0, 0), duration: TimeInterval(Float.random(in: 10.0 ... 15.0)))
         self.runAction(move) {
-            self.game?.asteroidHit(asteroid: self)
+            self.game?.objectHit(object: self, damage: Constants.asteroidHitDamage)
         }
     }
 }

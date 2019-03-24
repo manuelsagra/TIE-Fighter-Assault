@@ -41,7 +41,7 @@ class Asteroid: SCNNode {
     }
     
     private func moveToPlayer() {
-        let move = SCNAction.move(to: SCNVector3(0, 0, 0), duration: TimeInterval(Float.random(in: 10.0 ... 15.0)))
+        let move = SCNAction.move(to: SCNVector3(0, 0, 0), duration: TimeInterval(Float.random(in: 8.0 ... 14.0)))
         self.runAction(move) {
             self.game?.objectHit(object: self, damage: Constants.asteroidHitDamage)
         }

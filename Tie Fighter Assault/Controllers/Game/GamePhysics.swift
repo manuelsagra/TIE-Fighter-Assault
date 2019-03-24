@@ -29,11 +29,11 @@ extension GameViewController: ARSessionDelegate {
     
     func session(_ session: ARSession, didUpdate frame: ARFrame) {
         guard
-            let cameraOrientation = session.currentFrame?.camera.transform,
+            let cameraOrientation = sceneView.pointOfView?.transform,
             let tie = tieFighter else {
                 return
             }
-        tie.face(to: cameraOrientation)
+        tie.face(to: matrix_float4x4(cameraOrientation))
     }
     
 }
@@ -76,7 +76,7 @@ extension GameViewController: SCNPhysicsContactDelegate {
             let tie: TieFighter = c1 is TieFighter ? c1 as! TieFighter : c2 as! TieFighter
             let shoot: Shoot = c1 is Shoot ? c1 as! Shoot : c2 as! Shoot
             
-            tie.resistance -= shoot.damage
+            tie.receiveDamage(damage: shoot.damage)
             
             if tie.resistance <= 0 {
                 removeNode(tie)
@@ -86,6 +86,14 @@ extension GameViewController: SCNPhysicsContactDelegate {
                     self.addTieFighter()
                 }
                 Explossion.showExplossion(with: tie, in: sceneView.scene)
+                
+                // Remove other shoots to prevent perfomance degradation
+                let nodes = sceneView.scene.rootNode.childNodes
+                nodes.forEach { node in
+                    if node is Shoot {
+                        node.removeFromParentNode()
+                    }
+                }
             } else {
                 DispatchQueue.main.async {
                     SoundEffect.sharedInstance.play(sound: .hit)

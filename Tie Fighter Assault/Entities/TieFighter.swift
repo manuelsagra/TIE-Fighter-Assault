@@ -37,9 +37,27 @@ class TieFighter: SCNNode {
     
     // MARK: - Movement
     private func moveToPlayer() {
-        let move = SCNAction.move(to: SCNVector3(0, 0, 0), duration: TimeInterval(Float.random(in: 15.0 ... 20.0)))
+        let move = SCNAction.move(to: SCNVector3(0, 0, 0), duration: TimeInterval(Float.random(in: 10.0 ... 15.0)))
         self.runAction(move) {
             self.game?.objectHit(object: self, damage: Constants.tieFighterHitDamage)
         }
+    }
+    
+    // MARK: - Damage
+    func receiveDamage(damage: Int) {
+        resistance -= damage
+        if resistance < 0 {
+            resistance = 0
+        }
+        
+        // Calculate and position life bar
+        let width: Float = Float(resistance * 5) / Float(initialResistance)
+        let lifeBar = childNode(withName: "life", recursively: true)
+        
+        if width < 2 {
+            lifeBar?.geometry?.firstMaterial?.diffuse.contents = UIColor.red
+        }
+        lifeBar?.scale.x = width
+        lifeBar?.position.x = (width / 2.0) - 2.5
     }
 }

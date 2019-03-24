@@ -14,6 +14,7 @@ class Shoot: SCNNode {
     let velocity: Float = 9
     var type: Weapon
     var damage: Int = 0
+    var force: SCNVector3 = SCNVector3Zero
     
     // MARK: - Initialization
     init(camera: ARCamera, type: Weapon) {
@@ -49,14 +50,24 @@ class Shoot: SCNNode {
         let matrix = SCNMatrix4(camera.transform)
         
         let v = -velocity
-        let dir = SCNVector3(v * matrix.m31, v * matrix.m32, v * matrix.m33)
+        force = SCNVector3(v * matrix.m31, v * matrix.m32, v * matrix.m33)
         let pos = SCNVector3(x: matrix.m41, y: matrix.m42, z: matrix.m43)
         
         self.position = pos
-        self.physicsBody?.applyForce(dir, asImpulse: true)
+        resumeForce()
     }
     
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    // Stop and resume force
+    func pauseForce() {
+        self.physicsBody?.clearAllForces()
+        self.physicsBody?.applyForce(SCNVector3Zero, asImpulse: true)
+    }
+    
+    func resumeForce() {
+        self.physicsBody?.applyForce(force, asImpulse: true)
     }
 }

@@ -15,7 +15,7 @@ extension GameViewController {
         tieFighter = TieFighter(game: self)
         tieFighter?.position.x = Float.random(in: -20 ... 20)
         tieFighter?.position.y = Float.random(in: -1 ... 1)
-        tieFighter?.position.z = Float.random(in: -50 ... -30)
+        tieFighter?.position.z = Float.random(in: -40 ... -30)
         
         sceneView.scene.rootNode.addChildNode(tieFighter!)
         

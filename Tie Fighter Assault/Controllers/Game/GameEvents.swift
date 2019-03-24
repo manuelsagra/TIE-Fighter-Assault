@@ -59,14 +59,32 @@ extension GameViewController {
     
     // MARK: - Game Events
     func pause() {
+        // Scene and nodes
         sceneView.session.pause()
+        let nodes = sceneView.scene.rootNode.childNodes
+        nodes.forEach { node in
+            node.isPaused = true
+            if let shoot = node as? Shoot {
+                shoot.pauseForce()
+            }
+        }
+        
         asteroidTimer.invalidate()
         musicPlayer?.pause()
     }
     
     func resume() {
+        // Scene and nodes
         sceneView.session.run(arConfiguration)
-        asteroidTimer.fire()
+        let nodes = sceneView.scene.rootNode.childNodes
+        nodes.forEach { node in
+            node.isPaused = true
+            if let shoot = node as? Shoot {
+                shoot.resumeForce()
+            }
+        }
+        
+        asteroidTimer = Timer.scheduledTimer(timeInterval: Constants.asteroidSpawnTime, target: self, selector: #selector(addAsteroid), userInfo: nil, repeats: true)
         musicPlayer?.play()
     }
     

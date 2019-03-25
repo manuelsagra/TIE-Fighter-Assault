@@ -13,6 +13,9 @@
 		32213F7E2242ACD700B79AF7 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32213F7C2242ACD700B79AF7 /* MenuViewController.swift */; };
 		32213F7F2242ACD700B79AF7 /* MenuViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32213F7D2242ACD700B79AF7 /* MenuViewController.xib */; };
 		32213F822242AD7800B79AF7 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32213F812242AD7800B79AF7 /* Constants.swift */; };
+		3260DA312248E58B005F086D /* BonusShield.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3260DA2E2248E58B005F086D /* BonusShield.mp3 */; };
+		3260DA322248E58B005F086D /* BonusProtonTorpedoes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3260DA2F2248E58B005F086D /* BonusProtonTorpedoes.mp3 */; };
+		3260DA332248E58B005F086D /* PlayerHit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 3260DA302248E58B005F086D /* PlayerHit.mp3 */; };
 		32C70C522242B4DF0049AD6F /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C70C502242B4DF0049AD6F /* GameViewController.swift */; };
 		32C70C532242B4DF0049AD6F /* GameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 32C70C512242B4DF0049AD6F /* GameViewController.xib */; };
 		32C70C552242D4340049AD6F /* TieFighter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32C70C542242D4340049AD6F /* TieFighter.swift */; };
@@ -31,8 +34,6 @@
 		32EABAAC2246BBB700B572E9 /* Game.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32EABAAA2246BBB700B572E9 /* Game.mp3 */; };
 		32EABAAD2246BBB700B572E9 /* Title.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32EABAAB2246BBB700B572E9 /* Title.mp3 */; };
 		32EABAAF2246C7AF00B572E9 /* SoundEffect.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EABAAE2246C7AF00B572E9 /* SoundEffect.swift */; };
-		32EABAB22246E07100B572E9 /* BonusShield.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32EABAB02246E07100B572E9 /* BonusShield.mp3 */; };
-		32EABAB32246E07100B572E9 /* BonusProtonTorpedoes.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32EABAB12246E07100B572E9 /* BonusProtonTorpedoes.mp3 */; };
 		32EABAB92246E1A200B572E9 /* Laser.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32EABAB62246E1A200B572E9 /* Laser.mp3 */; };
 		32EABABB2246E21B00B572E9 /* GameOver.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32EABABA2246E21B00B572E9 /* GameOver.mp3 */; };
 		32EABABD2246E29B00B572E9 /* TieFighterExplossion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32EABABC2246E29B00B572E9 /* TieFighterExplossion.mp3 */; };
@@ -40,7 +41,6 @@
 		32EABAC32246E3D100B572E9 /* ProtonTorpedo.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32EABAC22246E3D100B572E9 /* ProtonTorpedo.mp3 */; };
 		32EABAC52246E4E100B572E9 /* Hit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32EABAC42246E4E100B572E9 /* Hit.mp3 */; };
 		32EABAC72247846100B572E9 /* AsteroidExplossion.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32EABAC62247846100B572E9 /* AsteroidExplossion.mp3 */; };
-		32EABACB2247865D00B572E9 /* PlayerHit.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32EABACA2247865D00B572E9 /* PlayerHit.mp3 */; };
 		32EABACD2247A1CD00B572E9 /* TieFighterFlyby.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 32EABACC2247A1CD00B572E9 /* TieFighterFlyby.mp3 */; };
 		32EABACF2247AC7900B572E9 /* Explossion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32EABACE2247AC7900B572E9 /* Explossion.swift */; };
 		32EABAD12247ACAC00B572E9 /* Explossion.scnp in Resources */ = {isa = PBXBuildFile; fileRef = 32EABAD02247ACAC00B572E9 /* Explossion.scnp */; };
@@ -57,6 +57,9 @@
 		32213F7C2242ACD700B79AF7 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		32213F7D2242ACD700B79AF7 /* MenuViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MenuViewController.xib; sourceTree = "<group>"; };
 		32213F812242AD7800B79AF7 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		3260DA2E2248E58B005F086D /* BonusShield.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BonusShield.mp3; sourceTree = "<group>"; };
+		3260DA2F2248E58B005F086D /* BonusProtonTorpedoes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BonusProtonTorpedoes.mp3; sourceTree = "<group>"; };
+		3260DA302248E58B005F086D /* PlayerHit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = PlayerHit.mp3; sourceTree = "<group>"; };
 		32C70C502242B4DF0049AD6F /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		32C70C512242B4DF0049AD6F /* GameViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = GameViewController.xib; sourceTree = "<group>"; };
 		32C70C542242D4340049AD6F /* TieFighter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TieFighter.swift; sourceTree = "<group>"; };
@@ -75,8 +78,6 @@
 		32EABAAA2246BBB700B572E9 /* Game.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Game.mp3; sourceTree = "<group>"; };
 		32EABAAB2246BBB700B572E9 /* Title.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Title.mp3; sourceTree = "<group>"; };
 		32EABAAE2246C7AF00B572E9 /* SoundEffect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SoundEffect.swift; sourceTree = "<group>"; };
-		32EABAB02246E07100B572E9 /* BonusShield.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BonusShield.mp3; sourceTree = "<group>"; };
-		32EABAB12246E07100B572E9 /* BonusProtonTorpedoes.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = BonusProtonTorpedoes.mp3; sourceTree = "<group>"; };
 		32EABAB62246E1A200B572E9 /* Laser.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Laser.mp3; sourceTree = "<group>"; };
 		32EABABA2246E21B00B572E9 /* GameOver.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = GameOver.mp3; sourceTree = "<group>"; };
 		32EABABC2246E29B00B572E9 /* TieFighterExplossion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TieFighterExplossion.mp3; sourceTree = "<group>"; };
@@ -84,7 +85,6 @@
 		32EABAC22246E3D100B572E9 /* ProtonTorpedo.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ProtonTorpedo.mp3; sourceTree = "<group>"; };
 		32EABAC42246E4E100B572E9 /* Hit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Hit.mp3; sourceTree = "<group>"; };
 		32EABAC62247846100B572E9 /* AsteroidExplossion.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = AsteroidExplossion.mp3; sourceTree = "<group>"; };
-		32EABACA2247865D00B572E9 /* PlayerHit.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = PlayerHit.mp3; sourceTree = "<group>"; };
 		32EABACC2247A1CD00B572E9 /* TieFighterFlyby.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = TieFighterFlyby.mp3; sourceTree = "<group>"; };
 		32EABACE2247AC7900B572E9 /* Explossion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Explossion.swift; sourceTree = "<group>"; };
 		32EABAD02247ACAC00B572E9 /* Explossion.scnp */ = {isa = PBXFileReference; lastKnownFileType = file.scp; path = Explossion.scnp; sourceTree = "<group>"; };
@@ -212,16 +212,16 @@
 		32EABA9722469A7400B572E9 /* Sounds */ = {
 			isa = PBXGroup;
 			children = (
+				3260DA2F2248E58B005F086D /* BonusProtonTorpedoes.mp3 */,
+				3260DA2E2248E58B005F086D /* BonusShield.mp3 */,
+				3260DA302248E58B005F086D /* PlayerHit.mp3 */,
 				32EABAC42246E4E100B572E9 /* Hit.mp3 */,
-				32EABACA2247865D00B572E9 /* PlayerHit.mp3 */,
 				32EABAC62247846100B572E9 /* AsteroidExplossion.mp3 */,
 				32EABAC22246E3D100B572E9 /* ProtonTorpedo.mp3 */,
 				32EABABA2246E21B00B572E9 /* GameOver.mp3 */,
 				32EABAC02246E34700B572E9 /* GameStart.mp3 */,
 				32EABABC2246E29B00B572E9 /* TieFighterExplossion.mp3 */,
 				32EABACC2247A1CD00B572E9 /* TieFighterFlyby.mp3 */,
-				32EABAB02246E07100B572E9 /* BonusShield.mp3 */,
-				32EABAB12246E07100B572E9 /* BonusProtonTorpedoes.mp3 */,
 				32EABAB62246E1A200B572E9 /* Laser.mp3 */,
 			);
 			path = Sounds;
@@ -297,8 +297,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				32EABAC12246E34700B572E9 /* GameStart.mp3 in Resources */,
+				3260DA312248E58B005F086D /* BonusShield.mp3 in Resources */,
 				32C70C6B2242E8840049AD6F /* asteroid.jpg in Resources */,
+				3260DA322248E58B005F086D /* BonusProtonTorpedoes.mp3 in Resources */,
 				32EABAC32246E3D100B572E9 /* ProtonTorpedo.mp3 in Resources */,
+				3260DA332248E58B005F086D /* PlayerHit.mp3 in Resources */,
 				32EABABD2246E29B00B572E9 /* TieFighterExplossion.mp3 in Resources */,
 				32C70C532242B4DF0049AD6F /* GameViewController.xib in Resources */,
 				32C70C672242E7BE0049AD6F /* Asteroid.dae in Resources */,
@@ -306,14 +309,11 @@
 				32EABAB92246E1A200B572E9 /* Laser.mp3 in Resources */,
 				32EABAD12247ACAC00B572E9 /* Explossion.scnp in Resources */,
 				32EABACD2247A1CD00B572E9 /* TieFighterFlyby.mp3 in Resources */,
-				32EABAB22246E07100B572E9 /* BonusShield.mp3 in Resources */,
 				32EABAAC2246BBB700B572E9 /* Game.mp3 in Resources */,
-				32EABAB32246E07100B572E9 /* BonusProtonTorpedoes.mp3 in Resources */,
 				32EABAD32247ACDC00B572E9 /* spark.png in Resources */,
 				32213F7F2242ACD700B79AF7 /* MenuViewController.xib in Resources */,
 				32EABABB2246E21B00B572E9 /* GameOver.mp3 in Resources */,
 				32213F6D2242ABAF00B79AF7 /* Assets.xcassets in Resources */,
-				32EABACB2247865D00B572E9 /* PlayerHit.mp3 in Resources */,
 				32EABADF2247C7C400B572E9 /* TieFighter.scn in Resources */,
 				32EABAAD2246BBB700B572E9 /* Title.mp3 in Resources */,
 				32EABAC52246E4E100B572E9 /* Hit.mp3 in Resources */,

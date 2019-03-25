@@ -78,7 +78,7 @@ extension GameViewController {
         sceneView.session.run(arConfiguration)
         let nodes = sceneView.scene.rootNode.childNodes
         nodes.forEach { node in
-            node.isPaused = true
+            node.isPaused = false
             if let shoot = node as? Shoot {
                 shoot.resumeForce()
             }

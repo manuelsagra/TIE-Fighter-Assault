@@ -36,5 +36,5 @@ enum Constants {
     static let protonTorpedoesBonusIncrement = 5
         
     // Timer
-    static let asteroidSpawnTime: Double = 5.0 // Seconds
+    static let asteroidSpawnTime: Double = 6.0 // Seconds
 }

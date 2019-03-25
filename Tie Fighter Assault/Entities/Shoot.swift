@@ -11,7 +11,7 @@ import ARKit
 class Shoot: SCNNode {
     
     // MARK: - Properties
-    let velocity: Float = 9
+    let velocity: Float = 12
     var type: Weapon
     var damage: Int = 0
     var force: SCNVector3 = SCNVector3Zero
@@ -25,14 +25,14 @@ class Shoot: SCNNode {
         let shootGeometry: SCNGeometry
         switch type {
         case .Laser:
-            shootGeometry = SCNSphere(radius: 0.1)
+            shootGeometry = SCNSphere(radius: 0.05)
             let material = SCNMaterial()
             material.diffuse.contents = UIColor.red
             shootGeometry.materials = [material]
             damage = Constants.laserHitDamage
             
         case .ProtonTorpedoes:
-            shootGeometry = SCNSphere(radius: 0.4)
+            shootGeometry = SCNSphere(radius: 0.2)
             let material = SCNMaterial()
             material.diffuse.contents = UIColor.blue
             shootGeometry.materials = [material]

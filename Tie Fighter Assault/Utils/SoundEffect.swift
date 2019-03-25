@@ -15,8 +15,8 @@ enum Effect: String {
     case hit = "Hit"
     case playerHit = "PlayerHit"
     
-    case asteroidExplossion = "AsteroidExplossion"
-    case tieFighterExplossion = "TieFighterExplossion"
+    case asteroidExplosion = "AsteroidExplosion"
+    case tieFighterExplosion = "TieFighterExplosion"
     case tieFighterFlyby = "TieFighterFlyby"
     
     case bonusShield = "BonusShield"

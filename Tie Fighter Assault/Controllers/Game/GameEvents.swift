@@ -93,18 +93,18 @@ extension GameViewController {
         
         DispatchQueue.main.async {
             SoundEffect.sharedInstance.play(sound: .gameOver)
-        }
         
-        var message = Constants.gameOverMessage
-        if checkHighScore() {
-            message = "\(message)\n\nNew high score, congratulations!"
+            var message = Constants.gameOverMessage
+            if self.checkHighScore() {
+                message = "\(message)\n\nNew high score, congratulations!"
+            }
+            let alertController = UIAlertController(title: Constants.gameOverTitle, message: message, preferredStyle: .alert)
+            alertController.addAction(UIAlertAction(title: "Accept", style: .default, handler: { (_) -> Void in
+                self.dismiss(animated: true)
+            }))
+            
+            self.present(alertController, animated: true)
         }
-        let alertController = UIAlertController(title: Constants.gameOverTitle, message: message, preferredStyle: .alert)
-        alertController.addAction(UIAlertAction(title: "Accept", style: .default, handler: { (_) -> Void in
-            self.dismiss(animated: true)
-        }))
-        
-        self.present(alertController, animated: true)
     }
     
     func checkHighScore() -> Bool {

@@ -1,5 +1,5 @@
 //
-//  Explossion.swift
+//  Explosion.swift
 //  Tie Fighter Assault
 //
 //  Created by Manuel Sagra de Diego on 24/03/2019.
@@ -8,14 +8,14 @@
 
 import ARKit
 
-struct Explossion {
+struct Explosion {
     
-    static func showExplossion(with node: SCNNode, in scene: SCNScene) {
-        show(with: node, in: scene, by: "Explossion")
+    static func showExplosion(with node: SCNNode, in scene: SCNScene) {
+        show(with: node, in: scene, by: "Explosion")
     }
     
     private static func show(with node: SCNNode, in scene: SCNScene, by name: String) {
-        guard let explossion = SCNParticleSystem(named: name, inDirectory: nil) else { return }
+        guard let explosion = SCNParticleSystem(named: name, inDirectory: nil) else { return }
         
         var transform = node.transform
         
@@ -30,7 +30,7 @@ struct Explossion {
         transform.m42 *= multiplier
         transform.m43 *= multiplier
         
-        scene.addParticleSystem(explossion, transform: transform)
+        scene.addParticleSystem(explosion, transform: transform)
     }
     
 }

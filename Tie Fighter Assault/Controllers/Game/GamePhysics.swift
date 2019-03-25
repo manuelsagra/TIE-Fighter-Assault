@@ -14,11 +14,12 @@ extension GameViewController {
     func objectHit(object: SCNNode, damage: Int) {
         DispatchQueue.main.async {
             SoundEffect.sharedInstance.play(sound: .playerHit)
-        }
-        updateShield(increment: -damage)
-        removeNode(object)
-        if object is TieFighter {
-            addTieFighter()
+        
+            self.updateShield(increment: -damage)
+            self.removeNode(object)
+            if object is TieFighter {
+                self.addTieFighter()
+            }
         }
     }
     
@@ -57,10 +58,10 @@ extension GameViewController: SCNPhysicsContactDelegate {
                 removeNode(asteroid)
                 updateScore(increment: Constants.asteroidScore)
                 DispatchQueue.main.async {
-                    SoundEffect.sharedInstance.play(sound: .asteroidExplossion)
+                    SoundEffect.sharedInstance.play(sound: .asteroidExplosion)
                 }
                 checkAsteroidBonus()
-                Explossion.showExplossion(with: asteroid, in: sceneView.scene)
+                Explosion.showExplosion(with: asteroid, in: sceneView.scene)
             } else {
                 DispatchQueue.main.async {
                     SoundEffect.sharedInstance.play(sound: .hit)
@@ -82,10 +83,10 @@ extension GameViewController: SCNPhysicsContactDelegate {
                 removeNode(tie)
                 updateScore(increment: Constants.tieFighterScore)
                 DispatchQueue.main.async {
-                    SoundEffect.sharedInstance.play(sound: .tieFighterExplossion)
+                    SoundEffect.sharedInstance.play(sound: .tieFighterExplosion)
                     self.addTieFighter()
                 }
-                Explossion.showExplossion(with: tie, in: sceneView.scene)
+                Explosion.showExplosion(with: tie, in: sceneView.scene)
                 
                 // Remove other shoots to prevent perfomance degradation
                 let nodes = sceneView.scene.rootNode.childNodes

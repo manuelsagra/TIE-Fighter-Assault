@@ -1,6 +1,6 @@
-# Tie-Fighter Assault
+# TIE-Fighter Assault
 
-This game uses ARKit to recreate a confrontation against an unlimited number of Tie-Fighters inside an asteroid field.
+This game uses ARKit to recreate a confrontation against an unlimited number of TIE-Fighters inside an asteroid field.
 
 The asteroids keep appearing at a constant rate and they come directly at your ship. If you destroy them you have a chance to recover some shield or proton torpedoes, a weapon that inflicts double damage than the default laser.
 
